@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="icon" href="formance-light.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=send" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>Bot<span style="color:yellow;">.</span></header>
+    <h2 id="output"></h2>
+    <div class="Chat">
+        <div class="chatbox" id="chatbox">
+        </div>
+    </div>
+    <div class="main-input">
+        <input type="text" id="user_input" placeholder="Ask Something ....">
+        <span id="btn" class="material-symbols-outlined">send</span>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                sendMessage();
+            });
+
+            $("#user_input").keypress(function (e) {
+                if (e.which == 13) {
+                    sendMessage();
+                    return false;
+                }
+            });
+
+            function sendMessage() {
+                var msg = $("#user_input").val().trim();
+                if (msg === "") return;
+
+                $("#chatbox").append('<div class="user-msg"><b>You:</b> ' + msg + '</div>');
+
+                $.post("/get", { message: msg }, function (data) {
+                    $("#chatbox").append('<div class="bot-msg"><b>Bot:</b> ' + data.reply + '</div>');
+                    $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight);
+                });
+
+                $("#user_input").val("");
+            }
+        });
+
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function printText() {
+            const output = document.getElementById("output");
+
+            await delay(1000);
+            output.innerHTML = "Hello";
+
+            await delay(1200);
+            output.innerHTML += "Abad";
+
+            await delay(1400);
+            output.innerHTML += "!";
+        }
+
+        printText();
+    </script>
+</body>
+
+</html>

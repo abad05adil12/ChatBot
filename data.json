@@ -1,0 +1,72 @@
+[
+  {
+    "intent": "greeting",
+    "patterns": ["hi Abad", "hello Abad ", "hey Abad", "good morning Abad", "good evening Abad", "what's up Abad", "yo", "hiya Abad", "hello there Abad", "hey there Abad"],
+    "responses": ["Hello Abad!", "Hi there Abad!", "Hey Abad!", "Greetings Abad!"]
+  },
+  {
+    "intent": "goodbye",
+    "patterns": ["bye", "see you", "good night", "see you later", "farewell", "catch you later", "take care", "goodbye", "later", "talk to you soon"],
+    "responses": ["Goodbye!", "See you later!", "Take care!", "Bye!"]
+  },
+  {
+    "intent": "thanks",
+    "patterns": ["thanks", "thank you", "thx", "thanks a lot", "thanks a bunch", "thank you so much", "much appreciated", "cheers", "thank you very much"],
+    "responses": ["You're welcome!", "No problem!", "Anytime!", "Glad I could help!"]
+  },
+  {
+    "intent": "age",
+    "patterns": ["how old are you", "what is your age", "age?", "your age?", "when were you born"],
+    "responses": ["I am an AI, I don't have an age.", "Age doesn't apply to me."]
+  },
+  {
+    "intent": "name",
+    "patterns": ["what is your name", "who are you", "name?", "may I know your name", "your name?"],
+    "responses": ["I am your chatbot.", "You can call me ChatBot.", "I am an AI assistant."]
+  },
+  {
+    "intent": "help",
+    "patterns": ["help me", "i need assistance", "can you help me?", "assist me", "support", "help", "need help", "please help"],
+    "responses": ["Sure, how can I assist you?", "I am here to help.", "Tell me what you need assistance with."]
+  },
+  {
+    "intent": "jokes",
+    "patterns": ["tell me a joke", "make me laugh", "joke", "funny story", "say something funny", "i want a joke", "funny"],
+    "responses": ["Why did the chicken cross the road? To get to the other side!", "I would tell you a joke about AI, but it might be too artificial.", "Why did the computer go to the doctor? It caught a virus!"]
+  },
+  {
+    "intent": "weather",
+    "patterns": ["what's the weather", "weather today", "is it raining", "temperature", "forecast", "weather report", "how's the weather", "will it rain today"],
+    "responses": ["I cannot check real-time weather, but make sure to look outside!", "Check your weather app for live updates.", "It’s always sunny in the AI world!"]
+  },
+  {
+    "intent": "time",
+    "patterns": ["what time is it", "current time", "tell me the time", "time now", "do you know the time"],
+    "responses": ["I don't have a watch, but you can check your device.", "It's time to code!"]
+  },
+  {
+    "intent": "shopping",
+    "patterns": ["i want to buy something", "shopping", "where can i buy", "buy product", "purchase", "i need to shop", "shopping help", "buying advice"],
+    "responses": ["I can suggest products, what are you looking for?", "You can check our online store.", "Sure, tell me the product you want."]
+  },
+  {
+    "intent": "complaint",
+    "patterns": ["i have a complaint", "problem", "issue with service", "not happy", "bad experience", "i want to report", "complain"],
+    "responses": ["We are sorry to hear that. Can you explain?", "Please describe your problem so we can help.", "We will do our best to resolve this."]
+  },
+  {
+    "intent": "order_status",
+    "patterns": ["where is my order", "track order", "order status", "my shipment", "delivery status", "is my order shipped", "track my parcel", "order tracking"],
+    "responses": ["Please provide your order ID.", "I can help track your order, give me the order number.", "Your order status can be checked online."]
+  },
+  {
+    "intent": "payment",
+    "patterns": ["how to pay", "payment methods", "pay for order", "checkout", "billing", "payment options", "pay now", "payment info"],
+    "responses": ["We accept credit cards, debit cards, and PayPal.", "You can pay via our secure online gateway.", "Choose your preferred payment method during checkout."]
+  },
+  {
+    "intent": "thanks_positive",
+    "patterns": ["thank you very much", "thanks a lot", "thanks a bunch", "thanks for your help", "thanks so much"],
+    "responses": ["Happy to help!", "Anytime!", "Glad I could help!"]
+  }
+]
